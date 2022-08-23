@@ -7,6 +7,7 @@ y = 4
 Arithmetic Operators
 '''
 
+'''
 # Addition
 print("x + y =", x+y)
 # Substraction
@@ -19,4 +20,13 @@ print("x / y =", x/y)
 print("x // y =", x//y)
 # Exponent
 print("x ** y =", x**y)
+'''
 
+# Example 1
+print("Enter Your Name:")
+x = input()
+print("Hello, "+x)
+
+# Example 2
+y = input("Enter your name:")
+print("Hello, "+y)
