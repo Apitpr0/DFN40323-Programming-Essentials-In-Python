@@ -1,6 +1,5 @@
 days = int(input("Number of days to rent the car: "))
-membershiptype = int(
-    input("Select the membership (1.Silver, 2.Gold, 3.Non-Member) : "))
+membershiptype = int(input("Select the membership (1.Silver, 2.Gold, 3.Non-Member) : "))
 print("      RECEIPT OF CAR RENTAL SHOP        ")
 print("----------------------------------------")
 
