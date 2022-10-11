@@ -1,19 +1,19 @@
-def completeSet(name, celcius):
-
-    if temp > 39.0:
+def completeSet():
+    name = input("Enter Your Name:")
+    celcius = float(input("Enter Your Temperature:"))
+    if celcius > 39.0:
         status = "High Fever"
         print("Status = High Fever")
-    elif temp > 37.5:
+    elif celcius > 37.5:
         status = "Fever"
         print("Status = Fever")
-    elif temp > 36.3:
+    elif celcius > 36.3:
         status = "Normal"
         print("Status = Normal")
     else:
         status = "Hypothermia"
         print("Status = Hypothermia")
+    return name, celcius
 
 
-name = input("Enter Your Name:")
-temp = float(input("Enter Your Temperature:"))
-completeSet(name, temp)
+completeSet()
