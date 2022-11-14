@@ -11,4 +11,4 @@ delinf = "DELETE FROM custinfo WHERE PLATE_NUMBER  = plate_number"
 
 executor.execute(delinf)
 carwashdb.commit()
-print(executor.rowcount, "record(s) delete")
+print(executor.rowcount, "record(s) delete")
