@@ -9,8 +9,8 @@ smdb = mysql.connector.connect(host="localhost",
 executor = smdb.cursor()
 
 #Insert multiple sql exec at once
-comm = "INSERT INTO likes (user_id,post_id) VALUES (%s,%s)"
-val = [(1, 50), (2, 52), (3, 54), (4, 56)]
+comm = "INSERT INTO likes (ID, USER_ID, POST_ID) VALUES (%s, %s, %s)"
+val = [(666, 1, 111), (777, 2, 115), (888, 3, 114), (999, 4, 112)]
 
 #Exec more then one command
 executor.executemany(comm, val)
