@@ -40,38 +40,38 @@ if cartype == 1:
 if cartype == 2:
     if service == "Wash":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=12 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=12 WHERE CARTYPE='MPV' AND PLATE_NUMBER='%s'"
             % (plate))
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
     elif service == "Vacuum":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='VACUUM',WASH_PRICE=5 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='VACUUM',WASH_PRICE=5 WHERE CARTYPE='MPV' AND PLATE_NUMBER='%s'"
             % (plate))
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
     elif service == "WashVacuum":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='WASH AND VACUUM',WASH_PRICE=17 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='WASH AND VACUUM',WASH_PRICE=17 WHERE CARTYPE='MPV' AND PLATE_NUMBER='%s'"
             % (plate))
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
 if cartype == 3:
     if service == "Wash":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=13 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=13 WHERE CARTYPE='SUV' AND PLATE_NUMBER='%s'"
             % (plate))
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
     elif service == "Vacuum":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=5 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=5 WHERE CARTYPE='SUV' AND PLATE_NUMBER='%s'"
             % (plate))
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
     elif service == "WashVacuum":
         executor.execute(
-            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=18 WHERE CARTYPE='SEDAN' AND PLATE_NUMBER='%s'"
+            "UPDATE custinfo SET WASH_TYPE='WASH',WASH_PRICE=18 WHERE CARTYPE='SUV' AND PLATE_NUMBER='%s'"
             % (plate), )
         carwashdb.commit()
         print("---------------------RECORD UPDATED---------------------")
