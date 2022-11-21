@@ -1,4 +1,4 @@
-#Import mysql 
+#Import mysql
 import mysql.connector
 
 carwashdb = mysql.connector.connect(host="localhost",
@@ -8,7 +8,7 @@ carwashdb = mysql.connector.connect(host="localhost",
 plate_number = input("Enter plate number to delete:")
 executor = carwashdb.cursor()
 
-delinf = "DELETE FROM custinfo WHERE PLATE_NUMBER  = plate_number"
+delinf = ("DELETE FROM custinfo WHERE PLATE_NUMBER  ='%s'" % (plate_number))
 
 executor.execute(delinf)
 carwashdb.commit()
