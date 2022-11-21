@@ -1,3 +1,4 @@
+#Import mysql 
 import mysql.connector
 
 carwashdb = mysql.connector.connect(host="localhost",

@@ -1,11 +1,15 @@
+#Import mysql connector
 import mysql.connector
 
+#connect to 'carwash' db
 carwashdb = mysql.connector.connect(host="localhost",
                                     user="root",
                                     password="",
                                     database="carwash")
 
+#Declare cursor() to executor
 executor = carwashdb.cursor()
+#Create tabe carRecord
 carRecord = """CREATE TABLE custInfo(
     CARTYPE VARCHAR (6) NOT NULL,
     PLATE_NUMBER VARCHAR (10) NOT NULL,
@@ -17,6 +21,7 @@ carRecord = """CREATE TABLE custInfo(
     WASH_PRICE INT,
     PRIMARY KEY (PLATE_NUMBER)
 )"""
-
+#Execute the sql statement
 executor.execute(carRecord)
+#Close db connection
 carwashdb.close()
