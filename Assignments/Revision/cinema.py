@@ -1,0 +1,41 @@
+print("Welcome to Ramen's Cinema")
+print("Here's our movie listing")
+print("+------------------------------------+")
+print("|               Movies               |")
+print("+------------------------------------+")
+print("| Black Panther : Wakanda Forever    |")
+print("| Remp-It 2                          |")
+print("| Top Gun : Maverick                 |")
+print("+------------------------------------+")
+print("Here's our pricing chart")
+print("+------------------------+-------+")
+print("|      Ticket Type       | Price |")
+print("+------------------------+-------+")
+print("| Adult (>12 Years Old)  | RM 16 |")
+print("| Children               | RM 10 |")
+print("+------------------------+-------+")
+type = str(input("Please enter your preferred movie: "))
+while True:
+    try:
+        adult = int(input("Enter the quantity of adult patrons: "))
+        children = int(input("Enter the quantity of child patrons: "))
+        adult_price = adult * 16
+        child_price = children * 10
+        total = adult_price + child_price
+        break
+    except TypeError:
+        print("Wrong Input Ma Men")
+print("Your total price is RM", total)
+payment = input("Enter payment amount in RM ")
+balance = float(payment) - float(total)
+print("----------------Ticket Summary---------------")
+print("Movie Type = ", type)
+print("Amount of adult patron : ", adult, "persons")
+print("Amount of child patron : ", children, "persons")
+print("Price for adult ticket : RM", adult_price)
+print("Price for children ticket : RM", child_price)
+print("You paid : RM", payment)
+print("Your balance : RM", balance)
+print("----------------Ticket Summary---------------")
+print("Thank you for visiting Ramen's Cinema!")
+print("Enjoy your movie :)")
